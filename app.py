@@ -11,9 +11,8 @@ import os
 app = Flask(__name__)
 app.config.from_object(Config)
 #Add Database
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://database_rqyg_user:M8p0IfEhKbR7SE6iBFnZI2BKFtwC0QhF@dpg-ck5dgcui9prc73a6sphg-a.oregon-postgres.render.com/database_rqyg"
 
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
 
 
 #Initialise Database
