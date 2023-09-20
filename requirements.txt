@@ -15,29 +15,3 @@ typing_extensions==4.7.1
 tzdata==2023.3
 Werkzeug==2.3.7
 WTForms==3.0.1
-(database) PS C:\Users\mrder\Desktop\My_Database_Python_Project> python -m pip install --upgrade    
-ERROR: You must give at least one requirement to install (see "pip help install")
-(database) PS C:\Users\mrder\Desktop\My_Database_Python_Project> pip --version                  
-pip 23.2.1 from C:\Users\mrder\Desktop\My_Database_Python_Project\database\Lib\site-packages\pip (python 3.11)
-(database) PS C:\Users\mrder\Desktop\My_Database_Python_Project> pip list
-Package           Version
------------------ -------
-blinker           1.6.2
-click             8.1.7
-colorama          0.4.6
-Flask             2.3.3
-Flask-SQLAlchemy  3.1.1
-Flask-WTF         1.1.1
-greenlet          2.0.2
-itsdangerous      2.1.2
-Jinja2            3.1.2
-MarkupSafe        2.1.3
-pip               23.2.1
-psycopg           3.1.10
-psycopg2          2.9.7
-setuptools        65.5.0
-SQLAlchemy        2.0.20
-typing_extensions 4.7.1
-tzdata            2023.3
-Werkzeug          2.3.7
-WTForms           3.0.1
