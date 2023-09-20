@@ -13,8 +13,6 @@ app.config.from_object(Config)
 #Add Database
 
 
-
-
 #Initialise Database
 db = SQLAlchemy(app)
 
