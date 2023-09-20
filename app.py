@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.config.from_object(Config)
 #Add Database
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
+
 
 
 #Initialise Database
