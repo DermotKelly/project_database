@@ -12,7 +12,8 @@ app = Flask(__name__)
 app.config.from_object(Config)
 #Add Database
 
-
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 #Initialise Database
 db = SQLAlchemy(app)
 
@@ -33,9 +34,9 @@ class Users(db.Model):
     email = db.Column(db.String(150), nullable=False, unique=True)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
-    # Create A String
-    #def __repr__(self) -> str:
-    #    return super().__repr__()
+    #Create A String
+    def __repr__(self) -> str:
+        return super().__repr__()
 
 # Create a route decorator
     @app.route('/')
