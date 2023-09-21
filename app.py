@@ -11,8 +11,11 @@ import os
 app = Flask(__name__)
 app.config.from_object(Config)
 #Add Database
+app.config['SQLALCHEMY_DATABASE_URI'] ="postgresql://flask_database_xgsr_user:YKzko8LPSvHHdM3pyZIggJmUSj7NhoZL@dpg-ck6ap59i0euc73b40on0-a.oregon-postgres.render.com/flask_database_xgsr"
 
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+#app.config['SECRET_KEY'] = "my secret key"
 #Initialise Database
 db = SQLAlchemy(app)
 
