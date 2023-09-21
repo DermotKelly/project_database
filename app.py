@@ -9,7 +9,7 @@ import os
 
 # Create Flask Instance
 app = Flask(__name__)
-app.config.from_object(Config)
+#app.config.from_object(Config)
 #Add Database
 app.config['SQLALCHEMY_DATABASE_URL'] ="postgresql://flask_database_xgsr_user:YKzko8LPSvHHdM3pyZIggJmUSj7NhoZL@dpg-ck6ap59i0euc73b40on0-a.oregon-postgres.render.com/flask_database_xgsr"
 
