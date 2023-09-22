@@ -5,25 +5,30 @@ from wtforms.validators import DataRequired
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from config import Config
-import os
+#import os
 
 # Create Flask Instance
 app = Flask(__name__)
-#app.config.from_object(Config)
+
+db = SQLAlchemy(app)
+
+
+app.config.from_object(Config)
 #Add Database
-app.config['SQLALCHEMY_DATABASE_URL'] ="postgresql://flask_database_xgsr_user:YKzko8LPSvHHdM3pyZIggJmUSj7NhoZL@dpg-ck6ap59i0euc73b40on0-a.oregon-postgres.render.com/flask_database_xgsr"
+#app.config['SQLALCHEMY_DATABASE_URI'] ="postgresql://flask_database_xgsr_user:YKzko8LPSvHHdM3pyZIggJmUSj7NhoZL@dpg-ck6ap59i0euc73b40on0-a.oregon-postgres.render.com/flask_database_xgsr"
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 #app.config['SECRET_KEY'] = "my secret key"
 #Initialise Database
-db = SQLAlchemy(app)
+
 
 # Activate Anti Cross-Site Request Forgery
 
 app.config.update(dict(
 SECRET_KEY="powerful secretkey",
 WTF_CSRF_SECRET_KEY="a csrf secret key"))
+
 
 
 def __repr_(self):
